@@ -3,10 +3,12 @@ from django.urls import path
 from knox import views as knox_views
 from rest_framework import routers
 
-from users.views import UserViewSet, RegisterAPI, LoginAPI
+from users.views import UserViewSet, RegisterAPI, LoginAPI, CountryViewSet, CityViewSet
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet, basename='users')
+router.register(r'countries', CountryViewSet, basename='countries')
+router.register(r'cities', CityViewSet, basename='cities')
 
 urlpatterns = [
     path('', include(router.urls)),

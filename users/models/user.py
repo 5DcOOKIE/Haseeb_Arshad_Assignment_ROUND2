@@ -52,6 +52,9 @@ class User(AbstractUser):
     role = models.IntegerField(choices=Role.choices, default=Role.Admin.value)
     phone = models.CharField(max_length=20, null=True, blank=True)
     address = models.TextField(null=True, blank=True)
+    country = models.ForeignKey('Country', on_delete=models.CASCADE, null=True, blank=True)
+    city = models.ForeignKey('City', on_delete=models.CASCADE, null=True, blank=True)
+    company = models.CharField(max_length=255, null=True, blank=True)
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
     objects = UserManager()
