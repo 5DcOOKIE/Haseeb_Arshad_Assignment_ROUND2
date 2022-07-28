@@ -34,7 +34,7 @@ class Command(BaseCommand):
                         date=row[0],
                         sales_number=row[1],
                         revenue=row[2],
-                        products=Product.objects.get(name=row[3]),
+                        product=Product.objects.get(name=row[3]),
                         user_id=User.objects.get(id=random.choice(user_ids)))
                     sale.save()
                     line_count += 1

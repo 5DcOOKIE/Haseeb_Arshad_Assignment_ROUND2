@@ -12,4 +12,4 @@ class ProductAdmin(ImportExportModelAdmin):
 
 @admin.register(Sale)
 class SaleAdmin(ImportExportModelAdmin):
-    list_display = ('id', 'date', 'sales_number', 'revenue', 'products', 'user_id')
+    list_display = ('id', 'date', 'sales_number', 'revenue', 'product', 'user_id')
