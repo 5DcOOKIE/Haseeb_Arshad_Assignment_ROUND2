@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'knox',
     'users',
+    'sales',
+    'import_export',
 ]
 
 REST_FRAMEWORK = {
